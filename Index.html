@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="main">
+            <div class="banner-section">
+                <div class="img-div">
+                <img id="musicImg" src="./music img/music-1.jpg" alt="poster" class="musicImg">
+                </div>
+            </div>
+            <div class="controls">
+            <div class="music-bar">
+                <input type="range" min="0" id="progress">
+                <div class="songTime">
+                    <span id="startTime">0.00</span>
+                    <span id="endTime">2.30</span>
+                </div>
+            </div>
+            <audio id="mainSong" src=""></audio>
+            <div class="control-icons">
+                <div class="songs">
+                    <span id="songName">Song name</span>
+                <span id="singerName">singer name</span>
+                </div>
+                <div class="playpause-Box">
+                    <span class="material-icons" title="Shuffle" id="Shuffle">
+                        shuffle
+                        </span>
+                    <span class="material-icons" id="preview">
+                        skip_previous
+                        </span>   
+                    <span class="material-icons play-music" id="playpause">
+                        play_arrow
+                        </span>
+                    <span class="material-icons" id="next">
+                        skip_next
+                        </span>
+                        <span class="material-icons" id="repeat" title="Repeat">
+                            repeat
+                            </span>
+                </div>
+                <div class="audioMusicList">
+                        <span class="material-icons" id="musicSound">
+                            volume_up
+                            </span>
+                            <span class="material-icons"  id="musicListIcon">
+                                queue_music
+                                </span>
+                </div>
+            </div>
+            
+        </div>
+        <div class="sound" id="soundDiv">
+            <span class="material-icons" id="musicSound">
+                volume_up
+                </span>
+            <input type="range" name="sound" id="sound">
+        </div>
+        <div class="musicList-box" id="musicListDiv">
+            <div class="header">
+                <p><span class="material-icons">
+                    queue_music
+                    </span>Music list</p>
+                    <span class="material-icons" id="closE">
+                        close
+                        </span>
+                </div>
+                <div class="musicList">
+                    <ul>
+                    </ul>
+                </div>
+        </div>
+        </div>
+    </div>
+    <script src="musicList.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
