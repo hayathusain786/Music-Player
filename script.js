@@ -2,6 +2,8 @@
 const musicImg=document.getElementById("musicImg");
 const songName=document.getElementById("songName");
 const singerName=document.getElementById("singerName");
+const songNameMobile=document.getElementById("songName-mobile");
+const singerNameMobile=document.getElementById("singerName-mobile");
 const mainSong=document.getElementById("mainSong");
 const controlIcons=document.querySelector(".control-icons");
 const playPause=document.getElementById("playpause");
@@ -27,8 +29,10 @@ window.addEventListener("load",()=>{
 
 function loadMusic(indexNum){
 songName.innerText=allMusic[indexNum - 1].name;
+songNameMobile.innerText=allMusic[indexNum - 1].name;
 musicImg.src=`./music img/${allMusic[indexNum -1 ].img}.jpg`;
 singerName.innerText=allMusic[indexNum - 1].artist;
+singerNameMobile.innerText=allMusic[indexNum - 1].artist;
 mainSong.src=`./music/${allMusic[indexNum-1].src}.mp3`;
 }
 function playMusic(){
@@ -200,7 +204,6 @@ liAudioTag.addEventListener("loadeddata",()=>{
 const allLiTag=document.querySelectorAll("li");
 
  function playingNow(){
-    debugger;
     for(let j=0;j<allLiTag.length;j++){
 
         let durationTag=allLiTag[j].querySelector(".audio-duration");
@@ -241,7 +244,6 @@ const Sound=document.getElementById("sound");
 
 
 mainSong.addEventListener("loadedmetadata",()=>{
-    console.log(mainSong.volume);
     Sound.addEventListener("change",()=>{
         let soundVal=(Sound.value)/100;
         mainSong.volume=soundVal;
